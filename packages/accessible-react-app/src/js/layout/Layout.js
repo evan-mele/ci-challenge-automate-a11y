@@ -15,8 +15,8 @@ const Layout = props => {
       {/* FE Talking Point - WCAG SC 2.4.2: Page Titled */}
       <Helmet>
         <title>{title}</title>
+        {/* <SkipNav text="Skip to main content" /> */}
       </Helmet>
-      <SkipNav text="Skip to main content" />
       <Header />
       <div id={MAIN_LAYOUT_ID}>{children}</div>
     </>

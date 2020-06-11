@@ -10,12 +10,13 @@ const Awards = props => {
 
   return (
     <Layout headerText={title} title={title}>
-      <Main headerId={HEADER_ID} headerText={title} setFocus>
+      <div headerId={HEADER_ID} headerText={title} setFocus>
         <p>These are our early wins!</p>
         <p>
           This should be the next focusable elment after the skip link:
           <br />
           <a href="https://google.com">Google search page</a>
+          <a href="https://yahoo.com"></a>
         </p>
         <p>
           AnyCorp has received the industry&lsquo;s highest achievement in
@@ -26,7 +27,7 @@ const Awards = props => {
           The solution is a bit more complicated than I would like. It does seem
           to work tho.
         </p>
-      </Main>
+      </div>
     </Layout>
   );
 };
