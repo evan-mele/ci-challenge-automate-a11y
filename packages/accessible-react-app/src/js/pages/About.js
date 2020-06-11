@@ -6,6 +6,7 @@ import Layout from '../layout/Layout';
 import Main from '../components/Main';
 import lake from '../../img/lake.jpg';
 
+
 const About = props => {
   const { title } = props;
 
@@ -13,12 +14,12 @@ const About = props => {
     <Layout headerText={title} title={title}>
       <aside className="ac-layout--two-column__aside">
         {/* FE Talking Point - WCAG SC 2.4.3: Focus Order */}
-        <div>
-          <p>
-            This is the <strong>aside</strong> element. It should be used for
-            content related to the main area. Asides include links to other
-            sections, image callouts, and quoted text.
-          </p>
+        <div>  
+          <span lang="iv">
+            Este es el elemento <strong>"a un lado".</strong> Debe usarse 
+            para contenido  relacionado con el área principal. Además,  
+            incluye enlaces a otras secciones, llamadas de imágenes y texto citado.
+          </span>
           <p>
             <a href="https://github.com">Github</a>
           </p>
@@ -51,6 +52,8 @@ const About = props => {
             {/* eslint-disable-next-line jsx-a11y/alt-text */}
             <img src={lake} />
           </p>
+
+          <iframe id="iFrame" src="http://localhost:8080" title="" height="450"></iframe>
         </section>
       </Main>
     </Layout>
