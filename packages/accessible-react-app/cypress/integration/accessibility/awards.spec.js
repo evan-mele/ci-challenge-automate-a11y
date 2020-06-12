@@ -24,8 +24,10 @@ describe( 'Awards Page', () => {
     });
 
     it( 'Should contain a link to Yahoo.com', () => {
-        cy.get( 'a[href=\'' + urlYahoo + '\']' )
-        .should( 'exist' )
-        .should( 'be.visible' );
+        // cy.get( 'a[href=\'' + urlYahoo + '\']' )
+        // .should( 'exist' )
+        // .should( 'be.visible' );
+
+        cy.checkA11y( '#employeeAwardsCerts', { a11yOptions } )
     });
 });
