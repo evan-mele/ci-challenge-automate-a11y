@@ -5,7 +5,7 @@ describe('Home', () => {
     const A11YOptions = {
         runOnly: {
             type: 'tag',
-            values: ['section508']
+            values: ['wcag2a']
         },
         rules: {
             'color-contrast': { enabled: true }
@@ -33,12 +33,13 @@ describe('Home', () => {
         cy.task('table', violationData)
     }
 
-    before(() => {
-        cy.visit('/')
-        cy.injectAxe()
-    });
+    // before(() => {
+    //
+    // });
 
     it('Has no detectable a11y violations on load', () => {
+        cy.visit('/')
+        cy.injectAxe()
         cy.checkA11y(null, A11YOptions, terminalLog)
     })
 })
