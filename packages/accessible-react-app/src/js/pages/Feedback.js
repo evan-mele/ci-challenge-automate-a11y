@@ -32,12 +32,13 @@ const Feedback = props => {
           isOpen={modalIsOpen}
           onRequestClose={handleCloseModal}
           shouldCloseOnOverlayClick={false}
+          id="feedback_modal"
         >
           <div
             className="ac-layout--flex ac-layout--justify-between"
             id="feedback_header"
           >
-            <h2 id="feedback_heading">AnyCorp Wants to Hear From You!</h2>
+            <h1 id="feedback_heading">AnyCorp Wants to Hear From You!</h1>
             <button
               aria-label="Close feedback modal"
               className="ac-form__button--close"
@@ -57,17 +58,26 @@ const Feedback = props => {
           <div id="feedback_form">
             <form action="#" className="ac-form">
               <fieldset className="ac-form__fieldset">
-                <legend className="ac-form__legend">
-                  Your Opinion Matters
-                </legend>
-                <label className="ac-form__label" htmlFor="name">
-                  Your name
+                <h2>Your Opinion Matters</h2>
+                <h4>Tell us how we are doing!</h4>
+
+                <label className="ac-form__label" htmlFor="first_name">
+                  Your first name
                 </label>
                 <input
                   aria-required="true"
                   className="ac-form__input"
                   type="text"
-                  id="name"
+                  id="first_name"
+                  required
+                />
+                <label className="ac-form__label" htmlFor="last_name">
+                </label>
+                <input
+                  aria-required="true"
+                  className="ac-form__input"
+                  type="text"
+                  id="last_name"
                   required
                 />
                 <label className="ac-form__label" htmlFor="email">
@@ -89,13 +99,29 @@ const Feedback = props => {
                   id="feedback"
                   required
                 />
+
+                <h3 aria-owns="rate_excellent">How would you rank our website?</h3>
+                <div id="radioGroup" role="radiogroup">
+                  <input type="radio" value="excellent" id="rate_excellent"/>
+                  <label for="rate_excellent">Excellent</label>
+
+                  <input type="radio" value="good" id="rate_good"/>
+                  <label for="rate_good">Good</label>
+                  
+                  <input type="radio" value="fair" id="rate_fair"/>
+                  <label for="rate_fair">Fair</label>
+
+                  <input type="radio" value="poor" id="rate_poor"/>
+                  <label for="rate_poor">Poor</label>
+                </div>
+
                 <button
                   className="ac-form__button"
                   onClick={handleCloseModal}
                   type="button"
-                >
-                  Fake submit and close
-                </button>
+                  id="submitForm"
+                  value="Fake submit and close"
+                />
               </fieldset>
             </form>
           </div>
