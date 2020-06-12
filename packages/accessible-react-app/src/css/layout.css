@@ -65,5 +65,30 @@ img {
   }
 }
 
+#employeeAwardsWrapper{
+  text-align: center;
+}
+
+table {
+  padding: 10px;
+  font-size: 14pt;
+  width: 550px;
+}
+
+th {
+  background: #e374f7;
+  color: #ffffff;
+}
+
+td {
+  background: #dddddd;
+}
+
+.headerStyle1{
+  color: #000000;
+  background-color: #ffffff;
+}
+
+
 @media (min-width: 48px) {
 }
