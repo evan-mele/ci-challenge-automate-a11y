@@ -1,9 +1,18 @@
 {
-    "baseUrl": "http://localhost:8080",
-    "a11yOptions": {
-        "runOnly": {
-            "type": "tag",
-            "values": [ "wcag2a", "best-practice" ]
-          }
-    }
+  "baseUrl": "http://localhost:8080",
+  "a11yOptions": {
+      "runOnly": {
+          "type": "tag",
+          "values": [ "wcag2a", "wcag21a", "best-practice", "cat.color" ]
+      }
+  },
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "overwrite": false,
+    "html": false,
+    "json": true,
+    "timestamp": "mmddyyyy_HHMMss"
+  },
+  "screenshotsFolder": "../accessible-react-app/mochawesome-report/assets",
+  "video": false
 }
