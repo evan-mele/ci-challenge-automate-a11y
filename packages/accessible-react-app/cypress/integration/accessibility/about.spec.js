@@ -1,3 +1,5 @@
+import { terminalLog } from '../../support/logAccessibiltyErrors';
+
 describe( 'About Page', () => {
 
     const a11yOptions = Cypress.config( 'a11yOptions' );
@@ -13,7 +15,7 @@ describe( 'About Page', () => {
     });
 
     it( '[A11Y] Visits the About Page', () => {
-        cy.checkA11y( null, { a11yOptions } )
+        cy.checkA11y( null, { a11yOptions }, terminalLog )
     });
 
     it( 'Should contain a link to Google.com', () => {

@@ -1,3 +1,5 @@
+import { terminalLog } from '../../support/logAccessibiltyErrors';
+
 describe( 'Feedback Page', () => {
 
     const a11yOptions = Cypress.config( 'a11yOptions' );
@@ -12,23 +14,17 @@ describe( 'Feedback Page', () => {
     });
 
     it( '[A11Y] Visits the feedback page', () => {
-        cy.checkA11y( null, { a11yOptions } )
+        cy.checkA11y( null, a11yOptions, terminalLog )
     });
 
-    it( '[A11Y] Displays the Feedback Form ', () => {
+    it( '[A11Y] Displays the Feedback Form', () => {
         cy.get( 'button' )
           .click();
-
-        // cy.get( '#feedback_modal *' )
-        //   .each( ($el, index, $list) => {
-        //       cy.log( $el )
-        //       cy.checkA11y( $el, { a11yOptions } );
-        //   });
           
-        cy.checkA11y( '#feedback_modal *', { a11yOptions } );
+        cy.checkA11y( '#feedback_modal *', a11yOptions, terminalLog );
     });
 
-    it( 'Completes and Submits the Feedback Form ', () => {
+    it( 'Completes and Submits the Feedback Form', () => {
         cy.get( '#first_name' )
           .type( 'Jane' );
 

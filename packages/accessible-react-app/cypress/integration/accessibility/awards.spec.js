@@ -1,3 +1,5 @@
+import { terminalLog } from '../../support/logAccessibiltyErrors';
+
 describe( 'Awards Page', () => {
 
     const a11yOptions = Cypress.config( 'a11yOptions' );
@@ -14,7 +16,7 @@ describe( 'Awards Page', () => {
     });
 
     it( '[A11Y] Visits the awards page', () => {
-        cy.checkA11y( null, { a11yOptions } )
+        cy.checkA11y( null, { a11yOptions }, terminalLog )
     });
 
     it( 'Should contain a link to Google.com', () => {
@@ -24,10 +26,8 @@ describe( 'Awards Page', () => {
     });
 
     it( 'Should contain a link to Yahoo.com', () => {
-        // cy.get( 'a[href=\'' + urlYahoo + '\']' )
-        // .should( 'exist' )
-        // .should( 'be.visible' );
-
-        cy.checkA11y( '#employeeAwardsCerts', { a11yOptions } )
+        cy.get( 'a[href=\'' + urlYahoo + '\']' )
+        .should( 'exist' )
+        .should( 'be.visible' );
     });
 });
