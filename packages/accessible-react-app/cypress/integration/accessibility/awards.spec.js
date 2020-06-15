@@ -16,7 +16,7 @@ describe( 'Awards Page', () => {
     });
 
     it( '[A11Y] Visits the awards page', () => {
-        cy.checkA11y( null, { a11yOptions }, terminalLog )
+        cy.checkA11y( null, a11yOptions, terminalLog )
     });
 
     it( 'Should contain a link to Google.com', () => {

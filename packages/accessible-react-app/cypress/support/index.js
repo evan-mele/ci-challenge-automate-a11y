@@ -35,19 +35,19 @@ Cypress.on( 'log:added', ( attrs, log ) => {
         }
 
         let invalidNodes = consoleProps.nodes;
-        if( invalidNodes.length > 0 ){
+        while( invalidNodes.length > 0 ){
             let node = invalidNodes.pop();
             
             if( node.none.length > 0 ){
-                axeErrorsObj.info.nodes = node.none;
+                axeErrorsObj.info.nodes.push( node.none );
             }// end if
 
             if( node.any.length > 0 ){
-                axeErrorsObj.info.nodes = node.any;
+                axeErrorsObj.info.nodes.push( node.any );
             }// end if
 
             if( node.all.length > 0 ){
-                axeErrorsObj.info.nodes = node.all;
+                axeErrorsObj.info.nodes.push( node.all );
             }// end if
         }// end if
 
