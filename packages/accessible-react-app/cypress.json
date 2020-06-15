@@ -3,7 +3,7 @@
   "a11yOptions": {
       "runOnly": {
           "type": "tag",
-          "values": [ "wcag2a", "best-practice" ]
+          "values": [ "wcag2a", "wcag21a", "best-practice", "cat.color" ]
       }
   },
   "reporter": "mochawesome",
