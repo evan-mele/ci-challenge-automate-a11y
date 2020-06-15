@@ -39,17 +39,17 @@ Cypress.on( 'log:added', ( attrs, log ) => {
             let node = invalidNodes.pop();
             
             if( node.none.length > 0 ){
-                axeErrorsObj.info.nodes.push( node.none );
+                axeErrorsObj.info.nodes.push( node.none[0] );
             }// end if
 
             if( node.any.length > 0 ){
-                axeErrorsObj.info.nodes.push( node.any );
+                axeErrorsObj.info.nodes.push( node.any[0] );
             }// end if
 
             if( node.all.length > 0 ){
-                axeErrorsObj.info.nodes.push( node.all );
+                axeErrorsObj.info.nodes.push( node.all[0] );
             }// end if
-        }// end if
+        }// end while
 
         axeErrors.push( axeErrorsObj );
     }// end if
