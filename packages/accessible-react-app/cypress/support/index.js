@@ -35,8 +35,11 @@ Cypress.on( 'log:added', ( attrs, log ) => {
         }
 
         let invalidNodes = consoleProps.nodes;
-        while( invalidNodes.length > 0 ){
-            let node = invalidNodes.pop();
+        let numNodes = invalidNodes.length;
+        let i = 0;
+
+        while( i < numNodes ){
+            let node = invalidNodes[ i ];
             
             if( node.none.length > 0 ){
                 axeErrorsObj.info.nodes.push( node.none[0] );
@@ -49,6 +52,8 @@ Cypress.on( 'log:added', ( attrs, log ) => {
             if( node.all.length > 0 ){
                 axeErrorsObj.info.nodes.push( node.all[0] );
             }// end if
+            
+            i++;
         }// end while
 
         axeErrors.push( axeErrorsObj );
