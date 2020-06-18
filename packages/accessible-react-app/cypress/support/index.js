@@ -53,6 +53,7 @@ Cypress.on( 'log:added', ( attrs, log ) => {
                 axeErrorsObj.info.nodes.push( node.all[0] );
             }// end if
             
+            axeErrorsObj.info.nodes.push( node.html )
             i++;
         }// end while
 
