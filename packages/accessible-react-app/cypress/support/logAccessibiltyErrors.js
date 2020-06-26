@@ -1,3 +1,12 @@
+/* ------------------------------------------------------------------------------------------------
+ * terminalLog( violations )
+ * 
+ * Adds custom behavior when violations are discovered. When a cypress 'task' function is called:
+ * - 'log' : Display statement with total number of accessibility options discovered in the test
+ * - 'table' : Display violation data in tabulated form (violation id, impact/severity,
+ *             description, and total number of violating nodes ).
+ * ------------------------------------------------------------------------------------------------
+ */
 const terminalLog = ( violations => {
     cy.task(
         'log',
@@ -20,4 +29,4 @@ const terminalLog = ( violations => {
 
 module.exports = {
     terminalLog: terminalLog,
-  };
+};
