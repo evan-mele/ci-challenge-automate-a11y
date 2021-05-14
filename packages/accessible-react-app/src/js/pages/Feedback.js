@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import FocusLock from 'react-focus-lock';
 import PropTypes from 'prop-types';
 import { HEADER_ID } from '../config/constants';
 
@@ -60,7 +61,7 @@ const Feedback = props => {
               <fieldset className="ac-form__fieldset">
                 <h2>Your Opinion Matters</h2>
                 <h4>Tell us how we are doing!</h4>
-
+                <FocusLock>
                 <label className="ac-form__label" htmlFor="first_name">
                   Your first name
                 </label>
@@ -99,7 +100,7 @@ const Feedback = props => {
                   id="feedback"
                   required
                 />
-
+                 </FocusLock>
                 <h3 aria-owns="rate_excellent">How would you rank our website?</h3>
                 <div id="radioGroup" role="radiogroup">
                   <input type="radio" value="excellent" id="rate_excellent"/>
