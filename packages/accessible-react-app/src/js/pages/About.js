@@ -41,7 +41,7 @@ const About = props => {
             something spectacular and use the new power of the Internet to make
             it happen.
           </p>
-          <h4>Some more things AnyCorp does!</h4>
+          <h1>Some more things AnyCorp does!</h1>
           <p>
             This should be the next focusable elment after the skip link:
             {''}
