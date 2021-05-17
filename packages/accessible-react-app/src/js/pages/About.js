@@ -50,7 +50,7 @@ const About = props => {
           <p>
             We are located at the base of a beautiful mountain!
             {/* eslint-disable-next-line jsx-a11y/alt-text */}
-            <img src={lake} />
+            <img src={lake} aria-label = "lake" />
           </p>
         </section>
       </Main>

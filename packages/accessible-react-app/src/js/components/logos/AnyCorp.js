@@ -14,7 +14,6 @@ const AnyCorp = props => {
 
   return (
     <svg
-      aria-label="AnyCorp homepage"
       data-name="Layer 1"
       focusable="false"
       height={height}
@@ -24,7 +23,7 @@ const AnyCorp = props => {
       width={width}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>AnyCorp home</title>
+      <title></title>
       <rect style={styleOne} width="144" height="144" rx="12" />
       <path
         style={styleTwo}

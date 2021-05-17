@@ -12,8 +12,7 @@ const PrimaryNav = props => {
       <ul className="ac-primary-nav">
         <li className="ac-primary-nav__list-item">
           <Link to="/">
-          <img className="home_icon" src={homeIcon} alt="Home" width="24" height="24"/>
-            Home
+          <img className="home_icon" src={homeIcon} aria-label="Home" width="24" height="24"/>
           </Link>
         </li>
         <li className="ac-primary-nav__list-item">
