@@ -52,8 +52,6 @@ const About = props => {
             {/* eslint-disable-next-line jsx-a11y/alt-text */}
             <img src={lake} />
           </p>
-
-          <iframe id="iFrame" src="http://localhost:8080" title="" height="450"></iframe>
         </section>
       </Main>
     </Layout>
