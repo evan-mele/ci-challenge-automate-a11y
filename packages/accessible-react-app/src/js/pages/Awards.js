@@ -63,7 +63,7 @@ const Awards = props => {
                     <td>0</td>
                 </tr>
                 <tr>
-                    <td scope="row">Joseph P. Fleming Jr.</td>
+                    <th scope="row">Joseph P. Fleming Jr.</th>
                     <td>5</td>
                     <td>1</td>
                     <td>3</td>
