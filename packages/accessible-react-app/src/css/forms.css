@@ -49,3 +49,13 @@
   height: 2em;
   width: 2em;
 }
+
+label,
+input {
+  display: block;
+}
+
+label, 
+button {
+  margin-top: 1rem;
+}

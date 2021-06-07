@@ -24,6 +24,9 @@ const PrimaryNav = props => {
         <li className="ac-primary-nav__list-item">
           <Link to="/feedback">Your Feedback</Link>
         </li>
+        <li className="ac-primary-nav__list-item">
+          <Link to="/contactus">Contact Us</Link>
+        </li>
       </ul>
     </nav>
   );

@@ -6,6 +6,7 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Awards from '../pages/Awards';
 import Feedback from '../pages/Feedback';
+import ContactUs from '../pages/ContactUs';
 
 const Routes = () => (
   <Switch>
@@ -24,6 +25,11 @@ const Routes = () => (
       exact
       path="/feedback"
       render={() => <Feedback title="AnyCorp Wants Your Feedback!" />}
+    />
+    <Route
+      exact
+      path="/contactus"
+      render={() => <ContactUs title="Contact Us!" />}
     />
   </Switch>
 );
